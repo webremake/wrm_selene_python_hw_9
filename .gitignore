@@ -132,4 +132,5 @@ main.py
 
 # allure
 tests/allure-results
+tests/allure-reports
 
