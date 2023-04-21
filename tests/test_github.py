@@ -15,4 +15,3 @@ def test_github_find_repo_issue_by_number(browser_control):
     browser.element('[href="/webremake/wrm_selene_python_hw_7"]').should(be.clickable).click()
     browser.element('#issues-tab').should(be.clickable).click()
     assert browser.element('.opened-by').should(have.text('#2'))
-
