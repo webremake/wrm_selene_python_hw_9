@@ -1,8 +1,15 @@
 import allure
+from allure_commons.types import Severity
 from selene import browser, have, be, by
 
 
 def test_github_find_repo_issue_by_number_with_allure_decorator_steps():
+    allure.dynamic.tag("homework")
+    allure.dynamic.severity(Severity.BLOCKER)
+    allure.dynamic.epic("QA.GURU course")
+    allure.dynamic.feature("Allure reports")
+    allure.dynamic.story("Allure decorator steps with dynamic labels")
+    allure.dynamic.link("https://github.com", name="Testing")
     open_main_page()
     search_for_repository('webremake/wrm_selene_python_hw_7')
     go_to_repository('webremake/wrm_selene_python_hw_7')

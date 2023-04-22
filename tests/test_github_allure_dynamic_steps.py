@@ -1,16 +1,16 @@
 import allure
+from allure_commons.types import Severity
 from selene import browser, have, be
 
 
+@allure.tag("homework")
+@allure.severity(Severity.CRITICAL)
+@allure.label("owner", "webremake")
+@allure.epic("QA.GURU course")
+@allure.feature("Allure reports")
+@allure.story("Allure with steps and decorator labels")
+@allure.link("https://github.com", name="Testing")
 def test_github_find_repo_issue_by_number_with_allure_dynamic_steps(browser_control):
-    """
-    открываем https://github.com/
-    в строку поиска вводим `/webremake/wrm_selene_python_hw_7`
-    нажимаем Enter
-    на открывшейся странице клакаем на первую ссыдку c текстом `webremake/wrm_selene_python_hw_7`
-    кликаем на таб `Issues`
-    проверяем что в списке есть issue с номером `#2`
-    """
     with allure.step("открываем https://github.com/"):
         browser.open('/')
 
